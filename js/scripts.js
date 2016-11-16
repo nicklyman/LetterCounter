@@ -2,8 +2,9 @@
 
 var userString = function(submittedText) { //Get user submitted text
   var letterCount = {}; //Create new empty object
-    for (var i = 0; i < submittedText.length; i++) { //Loop through each character in user submitted text
-    var letter = submittedText.charAt(i); //Looks at each character from submittedText
+  var onlyLetters = submittedText.replace(/[^A-Z]/g, ""); //Remove numeric values from string
+    for (var i = 0; i < onlyLetters.length; i++) { //Loop through each character in user submitted text
+    var letter = onlyLetters.charAt(i); //Looks at each character from submittedText
     if (letterCount[letter]) { //Checks if letter is already part of object
       letterCount[letter]++; //If yes, 1 is added to tally for that letter
     } else {
