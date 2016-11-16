@@ -15,3 +15,11 @@ label, .btn, #value, ul {
   word-wrap: normal;
 }
 
+h1 {
+  font-size: 48px;
+  text-shadow: 1px 1px 1px #000, 
+               2px 2px 3px gray,
+               4px 4px 6px white; 
+}
+
+
