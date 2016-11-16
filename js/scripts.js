@@ -25,7 +25,7 @@ $(document).ready(function() {
   $("form#userInput").submit(function(event) { //User text is submitted from index.html form
     event.preventDefault();
 
-    var submittedText = $("input#value").val().toLowerCase(); //User text from form
+    var submittedText = $("input#value").val().toUpperCase().split(" ").join(""); //User text from form converted to upper case and all white space removed
     var output = userString(submittedText); //Result of analysis conducted in business logic
 
     $(".output").show(); //Displays output
