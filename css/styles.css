@@ -1,3 +1,17 @@
-.jumbotron {
+.container {
   text-align: center;
+  font-family: monospace;
 }
+
+body {
+  background: lightslategrey;
+}
+
+label, .btn, #value, ul {
+  font-size: 16px;
+}
+
+#value, h3, ul {
+  word-wrap: normal;
+}
+

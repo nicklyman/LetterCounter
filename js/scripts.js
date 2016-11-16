@@ -2,7 +2,7 @@
 
 var userString = function(submittedText) { //Get user submitted text
   var letterCount = {}; //Create new empty object
-  $(".output").append("<p>" + (submittedText) + "</p>"); //Displays user submission text above list of letters and letter count
+  $(".output").append("<h3>" + (submittedText) + "</h3>"); //Displays user submission text above list of letters and letter count
   var onlyLetters = submittedText.toUpperCase().split(" ").join("").replace(/[^A-Z]/g, ""); //Keeps only letters in string for analysis
     for (var i = 0; i < onlyLetters.length; i++) { //Loop through each character in user submitted text
     var letter = onlyLetters.charAt(i); //Looks at each character from submittedText
@@ -19,13 +19,11 @@ var userString = function(submittedText) { //Get user submitted text
 };
 
 
-
-
 //user interface logic
 
 $(document).ready(function() {
   $("form#userInput").submit(function(event) { //User text is submitted from index.html form
-    $("ul,p").empty(); //Clears p tag and ul list after new text is submitted
+    $("ul,h3").empty(); //Clears p tag and ul list after new text is submitted
     event.preventDefault();
 
     var submittedText = $("input#value").val(); //User text from form converted to upper case and all white space removed
