@@ -2,7 +2,8 @@
 
 var userString = function(submittedText) { //Get user submitted text
   var letterCount = {}; //Create new empty object
-  var onlyLetters = submittedText.replace(/[^A-Z]/g, ""); //Keeps only letters in string for analysis
+  $(".output").append("<p>" + (submittedText) + "</p>"); //Displays user submission text above list of letters and letter count
+  var onlyLetters = submittedText.toUpperCase().split(" ").join("").replace(/[^A-Z]/g, ""); //Keeps only letters in string for analysis
     for (var i = 0; i < onlyLetters.length; i++) { //Loop through each character in user submitted text
     var letter = onlyLetters.charAt(i); //Looks at each character from submittedText
     if (letterCount[letter]) { //Checks if letter is already part of object
@@ -24,10 +25,10 @@ var userString = function(submittedText) { //Get user submitted text
 
 $(document).ready(function() {
   $("form#userInput").submit(function(event) { //User text is submitted from index.html form
-    $("ul").empty(); //Clears ul list after new text is submitted
+    $("ul,p").empty(); //Clears p tag and ul list after new text is submitted
     event.preventDefault();
 
-    var submittedText = $("input#value").val().toUpperCase().split(" ").join(""); //User text from form converted to upper case and all white space removed
+    var submittedText = $("input#value").val(); //User text from form converted to upper case and all white space removed
     $("input#value").val(""); //Clears field after submit button
     var output = userString(submittedText); //Result of analysis conducted in business logic
 
