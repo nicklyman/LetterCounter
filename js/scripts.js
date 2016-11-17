@@ -12,7 +12,7 @@ var userString = function(submittedText) { //Get user submitted text
       letterCount[letter] = 1; //If no, 1 is entered for the tally of that letter
     };
   };
-  Object.keys(letterCount).forEach(function(key) { //Loops through each key value pair 
+  Object.keys(letterCount).forEach(function(key) { //Loops through each key value pair of the letterCount object
   $(".output").append("<ul>" + (key) + " : " + (letterCount[key]) + "</ul>"); //List out letters and number of occurances on index.html
   });
   return letterCount; //Object is returned

@@ -14,7 +14,7 @@ _This web app asks the user to enter a string of text, click "submit", and see e
 * _Clone this repository to your Github account_
 * _Create a project directory up on your computer_
 * _Download the uncompressed, development version of jQuery [here](https://jquery.com/)_
-* _Open the index.hmtl file in your web browser_
+* _Open the index.html file in your web browser_
 * _Open the index.html, styles.css, and scripts.js files in a text editor_
 
 ## Known Bugs
