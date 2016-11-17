@@ -6,11 +6,11 @@
 
 ## Description
 
-_This web app asks the user to enter a string of text, click "submit", and see each unique letter and the number of occurrences of each letter displayed. This result matches the string that the user entered, but only returns the count of letters, no numbers, punctuation, or whitespaces are tallied. The website uses HTML, CSS, JavaScript, and jQuery._
+_This web app asks the user to enter a string of text, click "submit", and see each unique letter and the number of occurrences of each letter displayed. This result matches the string that the user entered, but only returns the count of letters, no numbers, punctuation, or whitespaces are tallied. The web app uses HTML, CSS, JavaScript, and jQuery. Feel free to play [here](https://nicklyman.github.io/LetterCounter/)._
 
 ## Setup/Installation Requirements
 
-* _Link to repository: [LetterCounter](nicklyman.github.io/LetterCounter)_
+* _Link to repository: [LetterCounter](https://github.com/nicklyman/LetterCounter/)_
 * _Clone this repository to your Github account_
 * _Create a project directory up on your computer_
 * _Download the uncompressed, development version of jQuery [here](https://jquery.com/)_
