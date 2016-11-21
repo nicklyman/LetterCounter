@@ -24,7 +24,7 @@ $(document).ready(function() {
     var submittedText = $("input#value").val(); //User text from form converted to upper case and all white space removed
     $("input#value").val(""); //Clears field after submit button
     var output = userString(submittedText); //Result of analysis conducted in business logic
-      $(".output").append("<h3>" + (submittedText) + "</h3>"); //Displays user submission text above list of letters and letter count
+    $(".output").append("<h3>" + (submittedText) + "</h3>"); //Displays user submission text above list of letters and letter count
     Object.keys(output).forEach(function(key) { //Loops through each key value pair of the letterCount object
       $(".output").append("<ul>" + (key) + " : " + (output[key]) + "</ul>"); //List out letters and number of occurances on index.html
     });
