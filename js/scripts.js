@@ -2,7 +2,6 @@
 
 var userString = function(submittedText) { //Get user submitted text
   var letterCount = {}; //Create new empty object
-  $(".output").append("<h3>" + (submittedText) + "</h3>"); //Displays user submission text above list of letters and letter count
   var onlyLetters = submittedText.toUpperCase().split(" ").join("").replace(/[^A-Z]/g, ""); //Keeps only letters in string for analysis, removes whitespace, converts all letters to uppercase
     for (var i = 0; i < onlyLetters.length; i++) { //Loop through each character in user submitted text
     var letter = onlyLetters.charAt(i); //Looks at each character from submittedText
@@ -12,9 +11,6 @@ var userString = function(submittedText) { //Get user submitted text
       letterCount[letter] = 1; //If no, 1 is entered for the tally of that letter
     };
   };
-  Object.keys(letterCount).forEach(function(key) { //Loops through each key value pair of the letterCount object
-  $(".output").append("<ul>" + (key) + " : " + (letterCount[key]) + "</ul>"); //List out letters and number of occurances on index.html
-  });
   return letterCount; //Object is returned
 };
 
@@ -28,6 +24,10 @@ $(document).ready(function() {
     var submittedText = $("input#value").val(); //User text from form converted to upper case and all white space removed
     $("input#value").val(""); //Clears field after submit button
     var output = userString(submittedText); //Result of analysis conducted in business logic
+    $(".output").append("<h3>" + (submittedText) + "</h3>"); //Displays user submission text above list of letters and letter count
+    Object.keys(output).forEach(function(key) { //Loops through each key value pair of the letterCount object
+      $(".output").append("<ul>" + (key) + " : " + (output[key]) + "</ul>"); //List out letters and number of occurances on index.html
+    });
     $(".output").show(); //Displays output
   });
 });
